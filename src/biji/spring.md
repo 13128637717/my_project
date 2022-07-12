@@ -44,6 +44,7 @@ HashTable 中的数组锁住，在多个线程中只允许一个线程访问 Put
 6. JDK1.8中只需要一次定位，并且采用CAS+synchronized的机制。如果对应下标处没有结点，说明没有发生哈希冲突，
    此时直接通过CAS进行插入，若成功，直接返回。若失败，则使用synchronized进行加锁插入；
 
+**类加载过程**
 ![img.png](img/img.png)
 ## Java并发
 
