@@ -1,0 +1,8 @@
+
+2
+java:S1643R"Use a StringBuilder instead.(Â£Ä’
+2
+java:S1643S"Use a StringBuilder instead.(ºĞÁÜ
+M	java:S106L"9Replace this use of System.out or System.err by a logger.(¸ØïU
+N	java:S106V"9Replace this use of System.out or System.err by a logger.(ŞñÂÏ
+S	java:S106X"9Replace this use of System.out or System.err by a logger.(İè¬øÿÿÿÿ
