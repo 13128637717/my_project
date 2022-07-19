@@ -49,7 +49,7 @@ HashTable 中的数组锁住，在多个线程中只允许一个线程访问 Put
 ## Java并发
 
 
-## MySQL数据库
+## MySQL数据
 
 ## Spring 
 ### Spring Bean 生命周期
