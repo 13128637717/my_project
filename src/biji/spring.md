@@ -50,6 +50,19 @@ HashTable 中的数组锁住，在多个线程中只允许一个线程访问 Put
 
 
 ## MySQL数据库
+**MySQL常用的存储引擎有什么？它们有什么区别？**
+1. InnoDB：InnoDB是MySQL的默认存储引擎，支持事务、行锁和外键等操作。
+
+2. MyISAM：MyISAM是MySQL5.1版本前的默认存储引擎，MyISAM的并发性比较差，不支持事务和外键等操作，默认的锁的粒度为表级锁。
+    ![img.png](img/mysql1.png)
+
+**数据库的三大范式**
+1. 第一范式：确保每列保持原子性，数据表中的所有字段值都是不可分解的原子值。
+2. 第二范式：确保表中的每列都和主键相关
+3. 第三范式：确保每列都和主键列直接相关而不是间接相关
+
+**索引**
+   + https://blog.csdn.net/weixin_70730532/article/details/125745202?spm=1001.2100.3001.7377&utm_medium=distribute.pc_feed_blog.none-task-blog-hot_rank_bottoming-9-125745202-null-null.nonecase&depth_1-utm_source=distribute.pc_feed_blog.none-task-blog-hot_rank_bottoming-9-125745202-null-null.nonecase
 
 ## Spring 
 ### Spring Bean 生命周期
