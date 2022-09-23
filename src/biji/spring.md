@@ -66,7 +66,7 @@ HashTable 中的数组锁住，在多个线程中只允许一个线程访问 Put
 
 **索引type级别**
 1. 索引type级别说明：system>const>eq_ref>ref>range>index>ALL，type级别，越左边，查询速度越快。
-2. SQL 性能优化的目标:至少要达到 range 级别,要求是 ref 级别,如果可以是 consts 最好
+2. SQL 性能优化的目标:至少要达到 range 级别,要求是 ref 级别,如果可以是 consts 最好。
 
 **Type级别解释**
 1. system级别
