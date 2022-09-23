@@ -64,6 +64,42 @@ HashTable 中的数组锁住，在多个线程中只允许一个线程访问 Put
 **索引**
    + https://blog.csdn.net/weixin_70730532/article/details/125745202?spm=1001.2100.3001.7377&utm_medium=distribute.pc_feed_blog.none-task-blog-hot_rank_bottoming-9-125745202-null-null.nonecase&depth_1-utm_source=distribute.pc_feed_blog.none-task-blog-hot_rank_bottoming-9-125745202-null-null.nonecase
 
+**索引type级别**
+1. 索引type级别说明：system>const>eq_ref>ref>range>index>ALL，type级别，越左边，查询速度越快。
+2. SQL 性能优化的目标:至少要达到 range 级别,要求是 ref 级别,如果可以是 consts 最好
+
+**Type级别解释**
+1. system级别
+ + 只有一条数据的系统表
+ + 或衍生表只能有一条数据的主查询
+2. const级别
+ + 仅仅能查出一条的SQL语句并且用于Primary key 或 unique索引；
+ + SELECT * from shop s where s.id=?
+ + 主键索引、唯一索引和unique索引达到这个级别，我们写sql要根据公司的业务去写，这个情况也很难达到的。
+
+3. eq_ref级别
+ + 唯一性索引：对于每个索引键的查询，返回匹配唯一行数据（有且只有1个，不能多，不能0）;
+ + 比如你select …from 一张表 where 比方说有一个字段 name = 一个东西，也就是我们以name作为索引，假设我之前给name加了一个索引值，我现在根据name去查，查完后有20条数据，我就必须保证这二十条数据每行都是唯一的，不能重复不能为空！
+只要满足以上条件，你就能达到eq_ref，当然前提是你要给name建索引，如果name连索引都没，那你肯定达不到eq_ref;
+此种情况常见于唯一索引和主键索引；
+比如我根据name去查，但是一个公司里面或一个学校里面叫name的可能不止一个，一般你想用这个的时候，就要确保你这个字段是唯一的，id就可以，你可以重复两个张三，但是你身份证肯定不会重复；
+添加唯一键语法：alter table 表名 add constraint 索引名 unique index(列名)
+检查字段是否唯一键：show index form 表名；被展示出来的皆是有唯一约束的；
+
+4. ref级别
++ 非唯一性索引：对于每个索引键的查询，返回匹配的所有行（可以是0，或多个）。
++ 假设有俩张三，我建立了非唯一索引，那么查出来就是这个级别拉，是不是很简单。
+
+5. range级别
++ 检索指定范围的行，查找一个范围内的数据，where后面是一个范围查询 （between,in,> < >=);
++ in有时有可能会失效，导致为ALL；
+
+6. index级别
++ 把索引的数据全查出来 就是这个级别了
+
+7. ALL级别
+不做索引 就是all级别咯
+
 ## Spring 
 ### Spring Bean 生命周期
 
