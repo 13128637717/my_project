@@ -1,0 +1,7 @@
+
+E
+java:S1604,"(Make this anonymous inner class a lambda(­Í¹8ö©è˜œ0
+Y
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(æØîüÿÿÿÿ
+T	java:S899%":Do something with the "boolean" value returned by "offer".(ñº˜çÿÿÿÿÿ
+Z	java:S106/"9Replace this use of System.out or System.err by a logger.(ŞŠùÿÿÿÿ8…ªè˜œ0

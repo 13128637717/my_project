@@ -15,3 +15,11 @@ K
 .src/com/y/test/xianliu/TokenBucketLimiter.java,d\b\db676e3ab027f4b947cf1a2c1a203f60cbeb24c5
 V
 &src/com/y/test/JoinCountDownLatch.java,3\1\31f4414243a05d7da6e15c2363160d8b917140f2
+N
+src/com/y/test/MyExecutor.java,0\1\011d46095d4e62f9dd12606065c901a8167a152f
+]
+-src/com/y/test/xianliu/LeakBucketLimiter.java,4\a\4adb7209035e9417be99af181126bc30fe3feebd
+Z
+*src/com/y/test/xianliu/CounterLimiter.java,0\a\0a586f49d70150605e830eab3fd287cf7a2ecc16
+Q
+!src/com/y/test/ExecutorsTest.java,b\6\b6a8bf423b9d9ead05170b65f4a5197810ef8817

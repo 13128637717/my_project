@@ -1,0 +1,16 @@
+
+>
+java:S1604
+"(Make this anonymous inner class a lambda(Å­ÀÆ
+=
+java:S1604"(Make this anonymous inner class a lambda(‚Æì]
+r
+java:S3077"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(Óõöäùÿÿÿÿ
+t
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ƒÚ«Õ
+t
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+N	java:S106!"9Replace this use of System.out or System.err by a logger.(²êõ°
+N	java:S106)"9Replace this use of System.out or System.err by a logger.(š¾®‡
+N	java:S106."9Replace this use of System.out or System.err by a logger.(çœó¶
